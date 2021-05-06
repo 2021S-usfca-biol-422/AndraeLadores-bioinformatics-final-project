@@ -1,6 +1,6 @@
 ---
 title: 'Your Title Here'
-author: "Don Francisco"
+author: "Andrae Ladores"
 date: "`r format(Sys.time(), '%d %B, %Y')`"
 output: pdf_document
 csl: bioinformatics.csl
@@ -8,7 +8,7 @@ bibliography: references.bib
 params:
   gff_file_path: "data/metadata/sars_refgenome_annotation.gff"
   vcf_dir_path: "data/11_vcf_output_for_R"
-  sra_runtable_path: "data/00_sra_runtable/SraRunTable_PRJNA656695_short_example.txt"
+  sra_runtable_path: "data/00_sra_runtable/SraRunTable.txt"
 ---
 
 ```{r setup, include = FALSE}
@@ -19,6 +19,11 @@ knitr::opts_chunk$set(echo = FALSE,
 ```
 
 # Background and Overview
+
+It was predicted that Africa would be one of the continents that would be heavily affected by the SARS-CoV-2 outbreak. It wasn't surprising as Africa sits at second place in the list of most populated continents, with approximately 1.3 billion (right behind Asia, which stands at 4 billion). Furthermore, Africa is ranked in the third poorest continent in the world, with their lack of adequate health care systems and the fact that Africa is already battling other epidemics: malaria, tuberculosis, and HIV. It wasn't surprising that researchers expected SARS-CoV-2 to have catastrophic damage on Africa. However, that prediction couldn't have been more inaccurate. 
+
+It has been over a year since the pandemic has affected the entire world. Yet, Africa isn't near the top of the most affected nations [discuss more how Africa is not doing that bad]
+
 
 This is a report on SARS-CoV-2, including some variant analysis [@koyama2020variant].
 
