@@ -1,5 +1,5 @@
 ---
-title: 'Your Title Here'
+title: 'Why Africa has not been severely affected by the SARS-CoV-2 pandemic'
 author: "Andrae Ladores"
 date: "`r format(Sys.time(), '%d %B, %Y')`"
 output: pdf_document
