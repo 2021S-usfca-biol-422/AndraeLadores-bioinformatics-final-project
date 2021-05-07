@@ -96,6 +96,53 @@ vcf_with_metadata %>%
 
 **Figure 1**: N and S genes have more unique SNPs in the set of samples analyzed.
 
+```{r mozambique-total-cases}
+# read in entire owid dataset
+all_owid_data <- readr::read_csv("data/raw_data/owid-covid-data.csv")
+
+# subset owid data, so only Africa is shown
+africa_owid_data <- all_owid_data %>%
+  dplyr::filter(`continent` == "Africa")
+
+# graph the mean total mozambique cases over time
+africa_total_cases <- mozambique_owid_data %>%
+  group_by(date) %>%
+  summarize(mean_total_cases = mean(total_cases)) %>%
+  ggplot(aes(x = lubridate::ymd(date),
+             y = mean_total_cases)) +
+  geom_line(color = "blue") +
+  labs(title = ("Relative Mean Total COVID-19 Cases Over-Time in Africa"),
+       x = "Date",
+       y = "Relative Number of Cases")
+
+africa_total_cases
+```
+
+**Figure 2**: The timeline of total COVID-19 cases in Africa.
+
+```{r USA-total-cases}
+# read in entire owid dataset
+all_owid_data <- readr::read_csv("data/raw_data/owid-covid-data.csv")
+
+# subset owid data, so only USA is shown
+USA_owid_data <- all_owid_data %>%
+  dplyr::filter(`location` == "United States")
+
+# graph the total USA cases over time
+USA_total_cases <- USA_owid_data %>%
+  group_by(date) %>%
+  summarize(mean_total_cases = mean(total_cases)) %>%
+  ggplot(aes(x = lubridate::ymd(date),
+             y = mean_total_cases)) +
+  geom_line(color = "green") +
+  labs(title = ("Mean Total COVID-19 Cases Over-Time in USA"),
+       x = "Date",
+       y = "Relative Number of Cases")
+
+USA_total_cases
+```
+**Figure 3**: The timeline of total COVID-19 cases in USA. 
+
 # Tables
 
 ```{r example-table}
