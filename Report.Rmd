@@ -22,7 +22,9 @@ knitr::opts_chunk$set(echo = FALSE,
 
 It was predicted that Africa would be one of the continents that would be heavily affected by the SARS-CoV-2 outbreak. It wasn't surprising as Africa sits at second place in the list of most populated continents, with approximately 1.3 billion (right behind Asia, which stands at 4 billion). Furthermore, Africa is ranked in the third poorest continent in the world, with their lack of adequate health care systems and the fact that Africa is already battling other epidemics: malaria, tuberculosis, and HIV. It wasn't surprising that researchers expected SARS-CoV-2 to have catastrophic damage on Africa. However, that prediction couldn't have been more inaccurate. 
 
-It has been over a year since the pandemic has affected the entire world. Yet, Africa isn't near the top of the most affected nations [discuss more how Africa is not doing that bad]
+It has been over a year since the pandemic has affected the entire world. Yet, Africa isn't near the top of the most affected nations at all. The primary goal of this research was to directly explore that phenomenon. 
+
+There are two main factors on why this has occurred. Time and the other being age. First, Africa had ample time to prepare for the pandemic - the various governments of Africa took swift action to seriously prepare for the inevitable virus. Second, the majority of the population in African countries are young; the average age in Mozambique wavers around 17 years old. It is known that COVID-19 will severely affect the older population, commonly people that are 65 or older. As a result, since African countries are properly prepared, paired with a large adolescent population, Africa is able to battle the pandemic and prevent high mortality rates, when compared to other nations. 
 
 
 This is a report on SARS-CoV-2, including some variant analysis [@koyama2020variant].
