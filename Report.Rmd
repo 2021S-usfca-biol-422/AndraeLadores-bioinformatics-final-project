@@ -105,7 +105,7 @@ africa_owid_data <- all_owid_data %>%
   dplyr::filter(`continent` == "Africa")
 
 # graph the mean total mozambique cases over time
-africa_total_cases <- mozambique_owid_data %>%
+africa_total_cases <- africa_owid_data %>%
   group_by(date) %>%
   summarize(mean_total_cases = mean(total_cases)) %>%
   ggplot(aes(x = lubridate::ymd(date),
@@ -121,9 +121,6 @@ africa_total_cases
 **Figure 2**: The timeline of total COVID-19 cases in Africa.
 
 ```{r USA-total-cases}
-# read in entire owid dataset
-all_owid_data <- readr::read_csv("data/raw_data/owid-covid-data.csv")
-
 # subset owid data, so only USA is shown
 USA_owid_data <- all_owid_data %>%
   dplyr::filter(`location` == "United States")
@@ -142,6 +139,53 @@ USA_total_cases <- USA_owid_data %>%
 USA_total_cases
 ```
 **Figure 3**: The timeline of total COVID-19 cases in USA. 
+
+```{r median-age-in-three-african-countries}
+# load color palette
+cbPalette1 <- c("#999999", "#E69F00", "#56B4E9", "#009E73", "#F0E442", "#0072B2", "#D55E00", "#CC79A7")
+
+# subset data, so only Mozambique, Niger, and Malawi is shown.
+# Also subset it so only the most recent date is collected
+three_african_nations <- all_owid_data %>%
+  dplyr::filter(`location` == "Mozambique" | `location` == "Niger" | `location` == "Malawi") %>% 
+  dplyr::filter(`date` == "2021-05-03")
+
+three_african_nations_plot <- ggplot(data = three_african_nations,
+                                     aes(x = location,
+                                         y = median_age,
+                                         fill = location)) +
+  geom_bar(stat='identity') + 
+  scale_fill_manual("Country", values=cbPalette1) +
+  labs(title = "Average Age in Mozambique, Niger, and Malawi.",
+       x = "Country",
+       y = "Median Age")
+
+three_african_nations_plot
+```
+**Figure 4**: Median Age in Mozambique, Niger, and Malawi, Africa. 
+
+```{r median-age-in-three-USA-states}
+# load color palette 
+cbPalette2 <- c("#000000", "#E69F00", "#56B4E9", "#009E73", "#F0E442", "#0072B2", "#D55E00", "#CC79A7")
+
+# subset data, so only USA, UK, and Italy is shown.
+# Subset so only the most recent date is collected
+three_other_countries <- all_owid_data %>%
+  dplyr::filter(`location` == "United States" | `location` == "United Kingdom" | `location` == "Italy") %>% 
+  dplyr::filter(`date` == "2021-05-03")
+
+three_other_countries_plot <- ggplot(data = three_other_countries,
+                                     aes(x = location,
+                                         y = median_age,
+                                         fill = location)) +
+  geom_bar(stat='identity') + 
+  scale_fill_manual("Country", values=cbPalette2) +
+  labs(title = "Average Age in United States, United Kingdom, and Italy.",
+       x = "Country",
+       y = "Median Age")
+
+three_other_countries_plot
+```
 
 # Tables
 
