@@ -1,14 +1,16 @@
 ---
-title: 'Why Africa has not been severely affected by the SARS-CoV-2 pandemic'
+title: "Why Africa has not been severely affected by the SARS-CoV-2 pandemic"
 author: "Andrae Ladores"
 date: "`r format(Sys.time(), '%d %B, %Y')`"
-output: pdf_document
+output:
+  html_document:
+    df_print: paged
 csl: bioinformatics.csl
 bibliography: references.bib
 params:
-  gff_file_path: "data/metadata/sars_refgenome_annotation.gff"
-  vcf_dir_path: "data/11_vcf_output_for_R"
-  sra_runtable_path: "data/00_sra_runtable/SraRunTable.txt"
+  gff_file_path: data/metadata/sars_refgenome_annotation.gff
+  vcf_dir_path: data/11_vcf_output_for_R
+  sra_runtable_path: data/00_sra_runtable/SraRunTable.txt
 ---
 
 ```{r setup, include = FALSE}
@@ -138,6 +140,7 @@ USA_total_cases <- USA_owid_data %>%
 
 USA_total_cases
 ```
+
 **Figure 3**: The timeline of total COVID-19 cases in USA. 
 
 ```{r median-age-in-three-african-countries}
@@ -146,11 +149,11 @@ cbPalette1 <- c("#999999", "#E69F00", "#56B4E9", "#009E73", "#F0E442", "#0072B2"
 
 # subset data, so only Mozambique, Niger, and Malawi is shown.
 # Also subset it so only the most recent date is collected
-three_african_nations <- all_owid_data %>%
+recent_three_african_nations <- all_owid_data %>%
   dplyr::filter(`location` == "Mozambique" | `location` == "Niger" | `location` == "Malawi") %>% 
   dplyr::filter(`date` == "2021-05-03")
 
-three_african_nations_plot <- ggplot(data = three_african_nations,
+recent_three_african_nations_plot <- ggplot(data = recent_three_african_nations,
                                      aes(x = location,
                                          y = median_age,
                                          fill = location)) +
@@ -160,8 +163,9 @@ three_african_nations_plot <- ggplot(data = three_african_nations,
        x = "Country",
        y = "Median Age")
 
-three_african_nations_plot
+recent_three_african_nations_plot
 ```
+
 **Figure 4**: Median Age in Mozambique, Niger, and Malawi, Africa. 
 
 ```{r median-age-in-three-USA-states}
@@ -170,11 +174,11 @@ cbPalette2 <- c("#000000", "#E69F00", "#56B4E9", "#009E73", "#F0E442", "#0072B2"
 
 # subset data, so only USA, UK, and Italy is shown.
 # Subset so only the most recent date is collected
-three_other_countries <- all_owid_data %>%
+recent_three_other_countries <- all_owid_data %>%
   dplyr::filter(`location` == "United States" | `location` == "United Kingdom" | `location` == "Italy") %>% 
   dplyr::filter(`date` == "2021-05-03")
 
-three_other_countries_plot <- ggplot(data = three_other_countries,
+recent_three_other_countries_plot <- ggplot(data = recent_three_other_countries,
                                      aes(x = location,
                                          y = median_age,
                                          fill = location)) +
@@ -184,8 +188,48 @@ three_other_countries_plot <- ggplot(data = three_other_countries,
        x = "Country",
        y = "Median Age")
 
-three_other_countries_plot
+recent_three_other_countries_plot
 ```
+
+**Figure 5**: Median Age in Italy, United Kingdom, and United State. 
+
+```{r total-deaths-africa}
+# subset data so all of Malawi, Mozambique, and Niger data is shown.
+all_three_african_nations <- all_owid_data %>%
+  dplyr::filter(`location` == "Mozambique" | `location` == "Niger" | `location` == "Malawi")
+
+# Create line graph that illustrates the total deaths over time in
+# three African countries 
+ggplot(all_three_african_nations, aes(x = date, 
+                                 y = total_deaths, 
+                                 colour = location)) +
+  geom_line() +
+  scale_color_manual("Country", values = cbPalette1) +
+  labs (title = "Total Deaths Over Time in Malawi, Mozambique, and Niger",
+        x = "Country",
+        y = "Number of deaths reported")
+```
+
+**Figure 6**: Total deaths over time in Mozambique, Niger, and Malawi. 
+
+```{r total-deaths-other-countries}
+# subset data so all of USA, UK, and Italy data is displayed
+all_three_other_countries <- all_owid_data %>%
+  dplyr::filter(`location` == "United States" | `location` == "United Kingdom" | `location` == "Italy") 
+
+# Create line graph that shows total deaths in USA, UK, and Italy
+ggplot(all_three_other_countries, aes(x = date, 
+                                 y = total_deaths, 
+                                 colour = location)) +
+  geom_line() +
+  scale_color_manual("Country", values = cbPalette2) +
+  labs (title = "Total Deaths Over Time in USA, UK, and Italy",
+        x = "Country",
+        y = "Number of deaths reported")
+```
+
+**Figure 6**: Total deaths over time in Italy, United Kingdom, and United States. 
+
 
 # Tables
 
