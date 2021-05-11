@@ -21,17 +21,19 @@ knitr::opts_chunk$set(echo = FALSE,
 ```
 
 # Background and Overview
+This research analysis is aimed to answer the initial predictions that Africa would be one of the continents that would be heavily affected by the SARS-CoV-2 pandemic. Africa is currently second in the world in terms of total population - containing roughly 1.3 billion people, second only to Asia. Africa is also known for their lack of an adequate healthcare system and along with the fact that Africa is battling other epidemics, it only makes sense to predict that Africa would be one of the continents that are extremely vulnerable to SARS-CoV-2. 
 
-It was predicted that Africa would be one of the continents that would be heavily affected by the SARS-CoV-2 outbreak. It wasn't surprising as Africa sits at second place in the list of most populated continents, with approximately 1.3 billion (right behind Asia, which stands at 4 billion). Furthermore, Africa is ranked in the third poorest continent in the world, with their lack of adequate health care systems and the fact that Africa is already battling other epidemics: malaria, tuberculosis, and HIV. It wasn't surprising that researchers expected SARS-CoV-2 to have catastrophic damage on Africa. However, that prediction couldn't have been more inaccurate. 
+It has roughly been over a year since the pandemic has affected the entire world. Yet, Africa is doing extremely well in the fight against the virus. After analyzing relevant COVID-19 datasets, Africa is significantly below in the number of COVID-19 cases and deaths when compared to other nations.
+There are two primary factors why Africa hasn’t been affected by SARS-CoV-2 in the way researchers have predicted. First, the majority of African countries took swift actions to prepare for the inevitable pandemic. Add in the fact that African nations already have prior experience in dealing with viruses or outbreaks, and you have a strong nation that understands proper precautions and procedures in order to prevent the spread of the virus. Second, Africa has an enormous population size, but it turns out that the majority of the population are adolescents; for example, the average age in Mozambique, Africa wavers around 17 years old. This can make all the difference since the SARS-CoV-2 virus is known to be fatal towards the elder population. 
 
-It has been over a year since the pandemic has affected the entire world. Yet, Africa isn't near the top of the most affected nations at all. The primary goal of this research was to directly explore that phenomenon. 
-
-There are two main factors on why this has occurred. Time and the other being age. First, Africa had ample time to prepare for the pandemic - the various governments of Africa took swift action to seriously prepare for the inevitable virus. Second, the majority of the population in African countries are young; the average age in Mozambique wavers around 17 years old. It is known that COVID-19 will severely affect the older population, commonly people that are 65 or older. As a result, since African countries are properly prepared, paired with a large adolescent population, Africa is able to battle the pandemic and prevent high mortality rates, when compared to other nations. 
-
+Overall, since Africa seriously prepared for the pandemic, paired with their vast population consisting of young adolescents, Africa was and is able to adequately battle the pandemic and prevent high numbers of cases & mortality rates, when compared to other nations.
 
 This is a report on SARS-CoV-2, including some variant analysis [@koyama2020variant].
 
 # Methods
+To answer the initial predictions, I needed an adequate COVID-19 dataset; which ended up being the *Our World in Data* or OWID COVID-19 dataset. This dataset is compiled using reliable sources, such as *JHU*, *WHO*, *CDC*, and more. It is updated daily and also contains dates, location, continent, and other corresponding information.
+
+After obtaining the OWID COVID-19 dataset, I used R Studio to input the data in a more organized manner [continue explaining what happened after]
 
 See the set of tutorials on the [vcfR package website](https://knausb.github.io/vcfR_documentation/index.html).
 
@@ -46,6 +48,8 @@ You may also want to use any of a range of different COVID data packages and dat
 ## Subsections are ok too
 
 # Results and Discussion
+
+# Elephant in the Room
 
 ```{r load-packages-and-functions}
 library("vcfR")
