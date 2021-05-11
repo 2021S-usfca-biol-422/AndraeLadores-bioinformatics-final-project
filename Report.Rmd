@@ -1,8 +1,9 @@
 ---
-title: "Why Africa has not been severely affected by the SARS-CoV-2 pandemic"
+title: "SARS-CoV-2 and its effects on Africa"
 author: "Andrae Ladores"
 date: "`r format(Sys.time(), '%d %B, %Y')`"
 output:
+  pdf_document: default
   html_document:
     df_print: paged
 csl: bioinformatics.csl
@@ -21,10 +22,10 @@ knitr::opts_chunk$set(echo = FALSE,
 ```
 
 # Background and Overview
-This research analysis is aimed to answer the initial predictions that Africa would be one of the continents that would be heavily affected by the SARS-CoV-2 pandemic. Africa is currently second in the world in terms of total population - containing roughly 1.3 billion people, second only to Asia. Africa is also known for their lack of an adequate healthcare system and along with the fact that Africa is battling other epidemics, it only makes sense to predict that Africa would be one of the continents that are extremely vulnerable to SARS-CoV-2. 
+This research analysis is aimed to answer the initial predictions that Africa would be one of the continents that would be heavily affected by the SARS-CoV-2 pandemic. Africa is currently second in the world in terms of total population - containing roughly 1.3 billion people, second only to Asia. Africa is also known for their lack of an adequate healthcare system and along with the fact that Africa is battling other epidemics, it only makes sense to predict that Africa would be one of the continents that are extremely vulnerable to SARS-CoV-2 [@africanperspective2020]. 
 
 It has roughly been over a year since the pandemic has affected the entire world. Yet, Africa is doing extremely well in the fight against the virus. After analyzing relevant COVID-19 datasets, Africa is significantly below in the number of COVID-19 cases and deaths when compared to other nations.
-There are two primary factors why Africa hasn’t been affected by SARS-CoV-2 in the way researchers have predicted. First, the majority of African countries took swift actions to prepare for the inevitable pandemic. Add in the fact that African nations already have prior experience in dealing with viruses or outbreaks, and you have a strong nation that understands proper precautions and procedures in order to prevent the spread of the virus. Second, Africa has an enormous population size, but it turns out that the majority of the population are adolescents; for example, the average age in Mozambique, Africa wavers around 17 years old. This can make all the difference since the SARS-CoV-2 virus is known to be fatal towards the elder population. 
+There are two primary factors why Africa has not been affected by SARS-CoV-2 in the way researchers have predicted. First, the majority of African countries took swift actions to prepare for the inevitable pandemic. Add in the fact that African nations already have prior experience in dealing with viruses or outbreaks, and you have a strong nation that understands proper precautions and procedures in order to prevent the spread of the virus [@africacovidpath2020]. Second, Africa has an enormous population size, but it turns out that the majority of the population are adolescents; for example, the average age in Mozambique, Africa wavers around 17 years old. This can make all the difference since the SARS-CoV-2 virus is known to be fatal towards the elder population [@ZHOU20201054]. 
 
 Overall, since Africa seriously prepared for the pandemic, paired with their vast population consisting of young adolescents, Africa was and is able to adequately battle the pandemic and prevent high numbers of cases & mortality rates, when compared to other nations.
 
