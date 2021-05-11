@@ -52,6 +52,7 @@ library("vcfR")
 library("ggplot2")
 library("dplyr")
 library("ggthemes")
+library("scales")
 
 # this loads all function files in the code/functions directory
 function_paths <- list.files("code/functions", full.names = TRUE)
@@ -113,6 +114,7 @@ africa_total_cases <- africa_owid_data %>%
   ggplot(aes(x = lubridate::ymd(date),
              y = mean_total_cases)) +
   geom_line(color = "blue") +
+  scale_y_continuous(labels = comma) +
   labs(title = ("Relative Mean Total COVID-19 Cases Over-Time in Africa"),
        x = "Date",
        y = "Relative Number of Cases")
@@ -134,6 +136,7 @@ USA_total_cases <- USA_owid_data %>%
   ggplot(aes(x = lubridate::ymd(date),
              y = mean_total_cases)) +
   geom_line(color = "green") +
+  scale_y_continuous(labels = comma) +
   labs(title = ("Mean Total COVID-19 Cases Over-Time in USA"),
        x = "Date",
        y = "Relative Number of Cases")
@@ -204,6 +207,7 @@ ggplot(all_three_african_nations, aes(x = date,
                                  y = total_deaths, 
                                  colour = location)) +
   geom_line() +
+  scale_y_continuous(labels = comma) +
   scale_color_manual("Country", values = cbPalette1) +
   labs (title = "Total Deaths Over Time in Malawi, Mozambique, and Niger",
         x = "Country",
@@ -222,6 +226,7 @@ ggplot(all_three_other_countries, aes(x = date,
                                  y = total_deaths, 
                                  colour = location)) +
   geom_line() +
+  scale_y_continuous(labels = comma) +
   scale_color_manual("Country", values = cbPalette2) +
   labs (title = "Total Deaths Over Time in USA, UK, and Italy",
         x = "Country",
