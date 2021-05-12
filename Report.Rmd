@@ -32,9 +32,9 @@ Overall, since Africa seriously prepared for the pandemic, paired with their vas
 This is a report on SARS-CoV-2, including some variant analysis [@koyama2020variant].
 
 # Methods
-To answer the initial predictions, an adequate COVID-19 dataset is needed; this analysis uses *Our World in Data* or *OWID* COVID-19 dataset. This dataset is compiled using reliable sources, such as *JHU*, *WHO*, *CDC*, and more. It is updated daily and also contains dates, location, continent, and other corresponding information.
+To answer the initial predictions, an adequate COVID-19 dataset is needed; this analysis uses *Our World in Data* or *OWID* COVID-19 dataset. This dataset is compiled using reliable sources, such as *JHU*, *WHO*, *CDC*, and more. It is updated daily and also contains dates, location, continent, and other corresponding information. For this analysis, the dataset was downloaded on May 3rd, 2021. 
 
-Once the OWID COVID-19 dataset is acquired, the dataset is then processed in R Studio to organize the data. Once organized using `readr` [@readr], `dplyr` [@dplyr] is used directly after to filter the dataset to only include the African continent and its nations. Then, `ggplot2` [@ggplot2] is applied to create six graphs to assist in the comparison of Africa and outside nations and determine if Africa was or is impacted by SARS-CoV-2. 
+Once the OWID COVID-19 dataset is acquired, the dataset is then processed in R Studio to organize the data. Once organized using `readr` [@readr], `dplyr` [@dplyr] is used directly after to filter the dataset to only include the African continent and its nations. Then, `ggplot2` [@ggplot2] is applied to create different graphs to assist in the comparison of Africa and outside nations to determine if Africa was or is impacted by SARS-CoV-2.
 
 See the set of tutorials on the [vcfR package website](https://knausb.github.io/vcfR_documentation/index.html).
 
@@ -46,9 +46,14 @@ You may also want to use any of a range of different COVID data packages and dat
 * https://covidtracking.com/data/api
   * `readr::read_csv("https://api.covidtracking.com/v1/states/daily.csv")`
 
-## Subsections are ok too
 
 # Results and Discussion
+With the produced figures from the *OWID* dataset, Africa contains a mean total reported COVID-19 cases above 80,000 as of recent (Figure 1a). On the other hand, USA has an average total case of well over 30,000,000 (Figure 1b). In a similar case, three African countries - Malawi, Mozambique, and Niger - all accumulated to a total number of COVID-19 related deaths under 1,200 (Figure 2a). With Malawi having the highest out of the three, with a little under 1,200. While Niger has the lowest, containing far below 300 deaths. When compared to three other countries - Italy, United Kingdom, and United States - Italy and United Kingdom fluctuate under 200,000 COVID-19 related deaths, while USA staggers right below 600,000 deaths.
+
+Despite Africa having an enormous population, pre-existing epidemics, and inadequate health care, Africa is successfully fending off COVID-19 when compared to other nations. 
+
+## Discussion
+Africa being spared by SARS-CoV-2 is a great phenomenon, it is stated that they were able to stay resilient and strong because of two important factors: preparedness and age. (talk more about these)
 
 # Elephant in the Room
 
