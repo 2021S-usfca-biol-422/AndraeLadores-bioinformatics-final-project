@@ -32,9 +32,9 @@ Overall, since Africa seriously prepared for the pandemic, paired with their vas
 This is a report on SARS-CoV-2, including some variant analysis [@koyama2020variant].
 
 # Methods
-To answer the initial predictions, I needed an adequate COVID-19 dataset; which ended up being the *Our World in Data* or OWID COVID-19 dataset. This dataset is compiled using reliable sources, such as *JHU*, *WHO*, *CDC*, and more. It is updated daily and also contains dates, location, continent, and other corresponding information.
+To answer the initial predictions, an adequate COVID-19 dataset is needed; this analysis uses *Our World in Data* or *OWID* COVID-19 dataset. This dataset is compiled using reliable sources, such as *JHU*, *WHO*, *CDC*, and more. It is updated daily and also contains dates, location, continent, and other corresponding information.
 
-After obtaining the OWID COVID-19 dataset, I used R Studio to input the data in a more organized manner [continue explaining what happened after]
+Once the OWID COVID-19 dataset is acquired, the dataset is then processed in R Studio to organize the data. Once organized using `readr` [@readr], `dplyr` [@dplyr] is used directly after to filter the dataset to only include the African continent and its nations. Then, `ggplot2` [@ggplot2] is applied to create six graphs to assist in the comparison of Africa and outside nations and determine if Africa was or is impacted by SARS-CoV-2. 
 
 See the set of tutorials on the [vcfR package website](https://knausb.github.io/vcfR_documentation/index.html).
 
