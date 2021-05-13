@@ -15,12 +15,11 @@ Parts of this pipeline approach are based on the pipeline described in the [Data
 * Use pipeline to analyze the dataset and troubleshoot problems that may arise - if needed, get help.
 * Use R and makefile to see results and make sure that everything is well.
 * Discuss the result and write a report. 
-
 * Write down intro and appropriately cite the work. 
 
 # Log
-* 2021-04-18: Forked, copied repository, and edited README to include basic information.
-* 2021-04-28: Updated "parse_tidy_and_stack_vcf_function" to actually work, fixed by Professor Zimmerman. 
+*2021-04-18: Forked, copied repository, and edited README to include basic information.
+*2021-04-28: Updated "parse_tidy_and_stack_vcf_function" to actually work, fixed by Professor Zimmerman. 
 *2021-05-03: Fixed merge conflict and merge into main branch.
 *2021-05-04: Created R-project after server crash and commit entire vcf files.
 *2021-05-06: Added written information in "Background and Overview", inputed raw owid data, and added total case graph for Africa and USA.
