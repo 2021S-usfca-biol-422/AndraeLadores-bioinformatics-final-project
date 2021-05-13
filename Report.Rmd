@@ -81,32 +81,32 @@ usa_owid_data <- all_owid_data %>%
 # subset data, so only Mozambique, Niger, and Malawi is shown.
 # Also subset it so only the most recent date is collected
 recent_three_african_nations <- all_owid_data %>%
-  dplyr::filter(`location` == "Mozambique" | `location` == "Niger" | `location` == "Malawi") %>%
+  filter(location %in% c("Mozambique", "Niger", "Malawi")) %>%
   dplyr::filter(`date` == "2021-05-03")
 
 # subset data, so only USA, UK, and Italy is shown.
 # Subset so only the most recent date is collected
 recent_three_other_countries <- all_owid_data %>%
-  dplyr::filter(`location` == "United States" | `location` == "United Kingdom" | `location` == "Italy") %>%
+  filter(location %in% c("United States", "United Kingdom", "Italy")) %>%
   dplyr::filter(`date` == "2021-05-03")
 
 # subset data so all of Malawi, Mozambique, and Niger data is shown.
 all_three_african_nations <- all_owid_data %>%
-  dplyr::filter(`location` == "Mozambique" | `location` == "Niger" | `location` == "Malawi")
+  filter(location %in% c("Mozambique", "Niger", "Malawi"))
 
 # subset data so all of USA, UK, and Italy data is displayed
 all_three_other_countries <- all_owid_data %>%
-  dplyr::filter(`location` == "United States" | `location` == "United Kingdom" | `location` == "Italy")
+  filter(location %in% c("United States", "United Kingdom", "Italy"))
 
 # subset owid data, so only Africa is shown
 mozambique_owid_data <- all_owid_data %>%
   dplyr::filter(`location` == "Mozambique")
 
 # load color palette 1
-cbpalette1 <- c("#999999", "#E69F00", "#56B4E9", "#009E73", "#F0E442", "#0072B2", "#D55E00", "#CC79A7")
+cbpalette1 <- c("#999999", "#E69F00", "#56B4E9")
 
 # load color palette 2
-cbpalette2 <- c("#000000", "#E69F00", "#56B4E9", "#009E73", "#F0E442", "#0072B2", "#D55E00", "#CC79A7")
+cbpalette2 <- c("#000000", "#E69F00", "#009E73")
 ```
 
 ```{r load-vcf-data}
@@ -270,7 +270,7 @@ vcf_with_metadata %>%
 # Tables
 
 ```{r example-table}
-# An example table to show the length of each gene using its start and end
+# A table to show the length of each gene using its start and end
 gene_table %>%
   mutate(length = end - start) %>%
   select(gene_name, start, end, length) %>%
