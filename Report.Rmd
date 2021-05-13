@@ -22,10 +22,10 @@ knitr::opts_chunk$set(echo = FALSE,
 ```
 
 # Background and Overview
-This research analysis is aimed to answer the initial predictions that Africa would be one of the continents that would be heavily affected by the SARS-CoV-2 pandemic [@modellingafrica]. Africa is currently second in the world in terms of total population - containing roughly 1.3 billion people, second only to Asia. Africa is also known for their lack of an adequate healthcare system and along with the fact that Africa is battling other epidemics, it only makes sense to predict that Africa would be one of the continents that are extremely vulnerable to SARS-CoV-2 [@africanperspective2020]. 
+This research analysis is aimed to answer the initial predictions that Africa would be one of the continents that would be heavily affected by the SARS-CoV-2 pandemic [@modellingafrica]. Africa is currently second in the world in terms of total population - containing roughly 1.3 billion people, second only to Asia. Africa is also known for their lack of an adequate healthcare system and they are currently battling and recovering from other epidemics. With these information, it is only expected that Africa would be one of the continents that is deemed vulnerable to SARS-CoV-2 [@africanperspective2020]. 
 
 It has roughly been over a year since the pandemic has affected the entire world. Yet, Africa is doing extremely well in the fight against the virus. After analyzing relevant COVID-19 datasets, Africa is significantly below in the number of COVID-19 cases and deaths when compared to other nations.
-There are two primary factors why Africa has not been affected by SARS-CoV-2 in the way researchers have predicted. First, the majority of African countries took swift actions to prepare for the inevitable pandemic. Add in the fact that African nations already have prior experience in dealing with viruses or outbreaks, and you have a strong nation that understands proper precautions and procedures in order to prevent the spread of the virus [@africacovidpath2020]. Second, Africa has an enormous population size, but it turns out that the majority of the population are adolescents; for example, the average age in Mozambique, Africa wavers around 17 years old. This can make all the difference since the SARS-CoV-2 virus is known to be fatal towards the elder population [@ZHOU20201054]. 
+There are two primary factors why Africa has not been affected by SARS-CoV-2 in the way researchers have predicted. First, the majority of African countries took swift actions to prepare for the inevitable pandemic. Add in the fact that African nations already have prior experience in dealing with viruses or outbreaks, and you have a strong nation that understands proper precautions and procedures in order to prevent the spread of the virus [@africacovidpath2020]. Second, Africa has an enormous population size, but it turns out that the majority of the population are adolescents; for example, the average age in Mozambique, Africa wavers around 17 years old. This can make all the difference since the SARS-CoV-2 is known to be fatal towards the older population [@ZHOU20201054]. 
 
 Overall, since Africa seriously prepared for the pandemic, paired with their vast population consisting of young adolescents, Africa was and is able to adequately battle the pandemic and prevent high numbers of cases & mortality rates, when compared to other nations.
 
@@ -34,36 +34,26 @@ This is a report on SARS-CoV-2, including some variant analysis [@koyama2020vari
 # Methods
 To answer the initial predictions, an adequate COVID-19 dataset is needed; this analysis uses *Our World in Data* or *OWID* COVID-19 dataset. This dataset is compiled using reliable sources, such as *JHU*, *WHO*, *CDC*, and more. It is updated daily and also contains dates, location, continent, and other corresponding information. For this analysis, the dataset was downloaded on May 3rd, 2021. 
 
-Once the OWID COVID-19 dataset is acquired, the dataset is then processed in R Studio to organize the data. Once organized using `readr` [@readr], `dplyr` [@dplyr] is used directly after to filter the dataset to only include the African continent and its nations. Then, `ggplot2` [@ggplot2] is applied to create different graphs to assist in the comparison of Africa and outside nations to determine if Africa was or is impacted by SARS-CoV-2.
-
-See the set of tutorials on the [vcfR package website](https://knausb.github.io/vcfR_documentation/index.html).
-
-You may also want to use any of a range of different COVID data packages and data sources:
-
-* https://kjhealy.github.io/covdata/
-* https://github.com/como-ph/oxcovid19
-* https://ropensci.org/blog/2020/10/20/searching-medrxivr-and-biorxiv-preprint-data/
-* https://covidtracking.com/data/api
-  * `readr::read_csv("https://api.covidtracking.com/v1/states/daily.csv")`
-
+Once the *OWID* COVID-19 dataset is acquired, the dataset is then processed in R Studio to organize the data. Once organized using `readr` [@readr], `dplyr` [@dplyr] is used directly after to filter the dataset to only include the African continent and its nations. Then, `ggplot2` [@ggplot2] is applied to create different graphs to assist in the comparison of Africa and outside nations to determine if Africa was or is impacted by SARS-CoV-2.
 
 # Results and Discussion
 ## Results
-With the produced figures from the *OWID* dataset, Africa contains a mean total reported COVID-19 cases above 80,000 as of recent (Figure 1a). On the other hand, USA has an average total case of well over 30,000,000 (Figure 1b). In a similar case, three African countries - Malawi, Mozambique, and Niger - all accumulated to a total number of COVID-19 related deaths under 1,200 (Figure 2a). With Malawi having the highest out of the three, with a little under 1,200. While Niger has the lowest, containing far below 300 deaths. When compared to three other countries - Italy, United Kingdom, and United States - Italy and United Kingdom fluctuate under 200,000 COVID-19 related deaths, while USA staggers right below 600,000 deaths.
+With the produced figures from the *OWID* dataset, Africa contains a mean total reported COVID-19 cases above 80,000 as of recent (Figure 1a). On the other hand, USA has an average total case of well over 30,000,000 (Figure 1b). In a similar case, three African countries - Malawi, Mozambique, and Niger - all accumulated to a total number of COVID-19 related deaths under 1,200 (Figure 2a). With Malawi having the highest out of the three, with a little under 1,200. While Niger has the lowest, containing far below 300 deaths. When compared to three other countries - Italy, United Kingdom, and United States - Italy and United Kingdom fluctuate under 200,000 COVID-19 related deaths, while USA staggers right below 600,000 deaths (Figure 2b).
 
-Despite Africa having an enormous population, pre-existing epidemics, and inadequate health care, Africa is successfully fending off COVID-19. Other nations like Italy, United Kingdom, and United states - who have adequate health care systems, smaller total population, and technologically advanced - have massive COVID-19 related cases and deaths. 
+Despite Africa having an enormous population, pre-existing epidemics, and inadequate health care systems, Africa is successfully fending off COVID-19. Other nations like Italy, United Kingdom, and United States - who have adequate health care systems, smaller total population, and technologically advanced - have massive COVID-19 related cases and deaths. 
 
 ## Discussion
 Africa being spared by SARS-CoV-2 is a great phenomenon, it is stated that they were able to stay resilient and strong because of two important factors: preparedness and age. 
 
 The majority of African governments efficiently and effectively placed proper COVID-19 procedures - implementing restrictions, closing borders, and spreading proper information to their respective communities [@africanperspective2020]. In addition, Africa's experience with epidemics continues to serve a crucial role. Several African nations have improved their health care systems as a result of prevalent epidemics - malaria, HIV, tuberculosis, and Ebola [@initiativesafrica]. Furthermore, Africans are accustomed to the precautions they need to take to prevent the spread or the infection of the virus - a survey in Mozambique, Africa displayed a compliance rate well above 90% when it came to basic face mask usage, proper cough regimens, and constant handwashing [@ijerph18031091]. 
 
-In nations like Italy, United Kingdom, and United States, the average population age falters around the 40-50 range (Figure 4). Compare that to the average age of the African countries - Malawi, Mozambique, and Niger - and there is a clear discrepancy. Malawi, Mozambique, and Niger all have an average population age below 20. 
+In nations like Italy, United Kingdom, and United States, the average population age falters around the 40-50 range (Figure 3a). Compare that to the average age of the African countries - Malawi, Mozambique, and Niger - and there is a clear discrepancy. Malawi, Mozambique, and Niger all have an average population age below 20 (Figure 3b). This crucial aspect greatly contributes to Africa's resilience, since the majority of the population are young and healthy, less COVID-19 related deaths occur [@Diope002699;@NIKOLAI2020112].  
+
+## Rise in numbers
+From late December 2020 to early February 2021, Africa experienced a sudden upsurge in new COVID-19 cases (Figure 4a). It isn't clear why this has occurred, but since this sudden spike occurred during prime holiday time, it is most likely due to foreigners and their visit to Africa. These increase of cases is the possible result of high distinct SNPs in places like Mozambique, especially in the S gene - which is directly responsible for binding the virus to the host cells (Figure 4b & 4c). This can be problematic as a mutated S gene can possibly affect the efficacy of the pre-existing COVID-19 vaccines. [@Gilbert2020; @koyama2020variant]
 
 
-## Elephant in the Room
-
-```{r load-packages-and-functions}
+```{r load-packages-and-data}
 library("vcfR")
 library("ggplot2")
 library("dplyr")
@@ -73,6 +63,49 @@ library("scales")
 # this loads all function files in the code/functions directory
 function_paths <- list.files("code/functions", full.names = TRUE)
 purrr::walk(function_paths, source)
+```
+
+```{r load-owid-data-and-codes}
+# read in entire owid dataset
+all_owid_data <- readr::read_csv("data/raw_data/owid-covid-data.csv")
+
+# subset owid data, so only Africa is shown
+africa_owid_data <- all_owid_data %>%
+  dplyr::filter(`continent` == "Africa")
+
+# subset owid data, so only USA is shown
+USA_owid_data <- all_owid_data %>%
+  dplyr::filter(`location` == "United States")
+
+# subset data, so only Mozambique, Niger, and Malawi is shown.
+# Also subset it so only the most recent date is collected
+recent_three_african_nations <- all_owid_data %>%
+  dplyr::filter(`location` == "Mozambique" | `location` == "Niger" | `location` == "Malawi") %>% 
+  dplyr::filter(`date` == "2021-05-03")
+
+# subset data, so only USA, UK, and Italy is shown.
+# Subset so only the most recent date is collected
+recent_three_other_countries <- all_owid_data %>%
+  dplyr::filter(`location` == "United States" | `location` == "United Kingdom" | `location` == "Italy") %>% 
+  dplyr::filter(`date` == "2021-05-03")
+
+# subset data so all of Malawi, Mozambique, and Niger data is shown.
+all_three_african_nations <- all_owid_data %>%
+  dplyr::filter(`location` == "Mozambique" | `location` == "Niger" | `location` == "Malawi")
+
+# subset data so all of USA, UK, and Italy data is displayed
+all_three_other_countries <- all_owid_data %>%
+  dplyr::filter(`location` == "United States" | `location` == "United Kingdom" | `location` == "Italy") 
+
+# subset owid data, so only Africa is shown
+mozambique_owid_data <- all_owid_data %>%
+  dplyr::filter(`location` == "Mozambique")
+
+# load color palette 1
+cbPalette1 <- c("#999999", "#E69F00", "#56B4E9", "#009E73", "#F0E442", "#0072B2", "#D55E00", "#CC79A7")
+
+# load color palette 2
+cbPalette2 <- c("#000000", "#E69F00", "#56B4E9", "#009E73", "#F0E442", "#0072B2", "#D55E00", "#CC79A7")
 ```
 
 ```{r load-vcf-data}
@@ -96,8 +129,125 @@ vcf_with_metadata <- add_genes_metadata_to_vcfstack(
 ```
 
 # Figures
+```{r africa-total-cases}
+# graph the mean total mozambique cases over time
+africa_total_cases <- africa_owid_data %>%
+  group_by(date) %>%
+  summarize(mean_total_cases = mean(total_cases)) %>%
+  ggplot(aes(x = lubridate::ymd(date),
+             y = mean_total_cases)) +
+  geom_line(color = "blue") +
+  scale_y_continuous(labels = comma) +
+  labs(title = ("Mean Total COVID-19 Cases Over Time in Africa"),
+       x = "Date",
+       y = "Relative Number of Cases")
 
-```{r sample-plot}
+africa_total_cases
+```
+
+**Figure 1a**: The timeline of total COVID-19 cases in Africa.
+
+```{r USA-total-cases}
+# graph the total USA cases over time
+USA_total_cases <- USA_owid_data %>%
+  group_by(date) %>%
+  summarize(mean_total_cases = mean(total_cases)) %>%
+  ggplot(aes(x = lubridate::ymd(date),
+             y = mean_total_cases)) +
+  geom_line(color = "green") +
+  scale_y_continuous(labels = comma) +
+  labs(title = ("Mean Total COVID-19 Cases Over Time in USA"),
+       x = "Date",
+       y = "Relative Number of Cases")
+
+USA_total_cases
+```
+
+**Figure 1b**: The timeline of total COVID-19 cases in USA. 
+
+```{r total-deaths-africa}
+# Create line graph that illustrates the total deaths over time in
+# three African countries 
+ggplot(all_three_african_nations, aes(x = date, 
+                                 y = total_deaths, 
+                                 colour = location)) +
+  geom_line() +
+  scale_y_continuous(labels = comma) +
+  scale_color_manual("Country", values = cbPalette1) +
+  labs (title = "Total Deaths Over Time in Malawi, Mozambique, and Niger",
+        x = "Country",
+        y = "Number of deaths reported")
+```
+
+**Figure 2a**: Total deaths over time in Mozambique, Niger, and Malawi.
+
+```{r total-deaths-other-countries}
+# Create line graph that shows total deaths in USA, UK, and Italy
+ggplot(all_three_other_countries, aes(x = date, 
+                                 y = total_deaths, 
+                                 colour = location)) +
+  geom_line() +
+  scale_y_continuous(labels = comma) +
+  scale_color_manual("Country", values = cbPalette2) +
+  labs (title = "Total Deaths Over Time in USA, UK, and Italy",
+        x = "Country",
+        y = "Number of deaths reported")
+```
+
+**Figure 2b**: Total deaths over time in Italy, United Kingdom, and United States. 
+
+```{r median-age-in-three-african-countries}
+# create barplot to display the median age over three Africa nations
+recent_three_african_nations_plot <- ggplot(data = recent_three_african_nations,
+                                     aes(x = location,
+                                         y = median_age,
+                                         fill = location)) +
+  geom_bar(stat='identity') + 
+  scale_fill_manual("Country", values=cbPalette1) +
+  labs(title = "Average Age in Mozambique, Niger, and Malawi.",
+       x = "Country",
+       y = "Median Age")
+
+recent_three_african_nations_plot
+```
+
+**Figure 3a**: Median Age in Mozambique, Niger, and Malawi, Africa. 
+
+```{r median-age-in-three-USA-states}
+# create barplot to display the median age over three other nations
+recent_three_other_countries_plot <- ggplot(data = recent_three_other_countries,
+                                     aes(x = location,
+                                         y = median_age,
+                                         fill = location)) +
+  geom_bar(stat='identity') + 
+  scale_fill_manual("Country", values=cbPalette2) +
+  labs(title = "Average Age in United States, United Kingdom, and Italy.",
+       x = "Country",
+       y = "Median Age")
+
+recent_three_other_countries_plot
+```
+
+**Figure 3b**: Median Age in Italy, United Kingdom, and United State. 
+
+```{r new-cases-mozambique}
+# graph the mean total mozambique cases over time
+mozambique_new_cases <- mozambique_owid_data %>%
+  group_by(date) %>%
+  summarize(new_cases = (new_cases)) %>%
+  ggplot(aes(x = lubridate::ymd(date),
+             y = new_cases)) +
+  geom_line(color = "blue") +
+  labs(title = ("New COVID-19 Cases Over-Time in Mozambique"),
+       x = "Date",
+       y = "Number of new COVID-19 Cases")
+
+mozambique_new_cases
+```
+
+**Figure 4a**: Number of newly reported COVID-19 cases in Mozambique.
+
+```{r distinct-snps}
 # create a plot of unique SNP locations within each gene across all samples
 vcf_with_metadata %>%
   filter(!is.na(gene)) %>% # get rid of SNPs not in gene regions
@@ -113,144 +263,7 @@ vcf_with_metadata %>%
   theme_few() # get rid of the grey background
 ```
 
-**Figure 1**: N and S genes have more unique SNPs in the set of samples analyzed.
-
-```{r mozambique-total-cases}
-# read in entire owid dataset
-all_owid_data <- readr::read_csv("data/raw_data/owid-covid-data.csv")
-
-# subset owid data, so only Africa is shown
-africa_owid_data <- all_owid_data %>%
-  dplyr::filter(`continent` == "Africa")
-
-# graph the mean total mozambique cases over time
-africa_total_cases <- africa_owid_data %>%
-  group_by(date) %>%
-  summarize(mean_total_cases = mean(total_cases)) %>%
-  ggplot(aes(x = lubridate::ymd(date),
-             y = mean_total_cases)) +
-  geom_line(color = "blue") +
-  scale_y_continuous(labels = comma) +
-  labs(title = ("Relative Mean Total COVID-19 Cases Over-Time in Africa"),
-       x = "Date",
-       y = "Relative Number of Cases")
-
-africa_total_cases
-```
-
-**Figure 2**: The timeline of total COVID-19 cases in Africa.
-
-```{r USA-total-cases}
-# subset owid data, so only USA is shown
-USA_owid_data <- all_owid_data %>%
-  dplyr::filter(`location` == "United States")
-
-# graph the total USA cases over time
-USA_total_cases <- USA_owid_data %>%
-  group_by(date) %>%
-  summarize(mean_total_cases = mean(total_cases)) %>%
-  ggplot(aes(x = lubridate::ymd(date),
-             y = mean_total_cases)) +
-  geom_line(color = "green") +
-  scale_y_continuous(labels = comma) +
-  labs(title = ("Mean Total COVID-19 Cases Over-Time in USA"),
-       x = "Date",
-       y = "Relative Number of Cases")
-
-USA_total_cases
-```
-
-**Figure 3**: The timeline of total COVID-19 cases in USA. 
-
-```{r median-age-in-three-african-countries}
-# load color palette
-cbPalette1 <- c("#999999", "#E69F00", "#56B4E9", "#009E73", "#F0E442", "#0072B2", "#D55E00", "#CC79A7")
-
-# subset data, so only Mozambique, Niger, and Malawi is shown.
-# Also subset it so only the most recent date is collected
-recent_three_african_nations <- all_owid_data %>%
-  dplyr::filter(`location` == "Mozambique" | `location` == "Niger" | `location` == "Malawi") %>% 
-  dplyr::filter(`date` == "2021-05-03")
-
-recent_three_african_nations_plot <- ggplot(data = recent_three_african_nations,
-                                     aes(x = location,
-                                         y = median_age,
-                                         fill = location)) +
-  geom_bar(stat='identity') + 
-  scale_fill_manual("Country", values=cbPalette1) +
-  labs(title = "Average Age in Mozambique, Niger, and Malawi.",
-       x = "Country",
-       y = "Median Age")
-
-recent_three_african_nations_plot
-```
-
-**Figure 4**: Median Age in Mozambique, Niger, and Malawi, Africa. 
-
-```{r median-age-in-three-USA-states}
-# load color palette 
-cbPalette2 <- c("#000000", "#E69F00", "#56B4E9", "#009E73", "#F0E442", "#0072B2", "#D55E00", "#CC79A7")
-
-# subset data, so only USA, UK, and Italy is shown.
-# Subset so only the most recent date is collected
-recent_three_other_countries <- all_owid_data %>%
-  dplyr::filter(`location` == "United States" | `location` == "United Kingdom" | `location` == "Italy") %>% 
-  dplyr::filter(`date` == "2021-05-03")
-
-recent_three_other_countries_plot <- ggplot(data = recent_three_other_countries,
-                                     aes(x = location,
-                                         y = median_age,
-                                         fill = location)) +
-  geom_bar(stat='identity') + 
-  scale_fill_manual("Country", values=cbPalette2) +
-  labs(title = "Average Age in United States, United Kingdom, and Italy.",
-       x = "Country",
-       y = "Median Age")
-
-recent_three_other_countries_plot
-```
-
-**Figure 5**: Median Age in Italy, United Kingdom, and United State. 
-
-```{r total-deaths-africa}
-# subset data so all of Malawi, Mozambique, and Niger data is shown.
-all_three_african_nations <- all_owid_data %>%
-  dplyr::filter(`location` == "Mozambique" | `location` == "Niger" | `location` == "Malawi")
-
-# Create line graph that illustrates the total deaths over time in
-# three African countries 
-ggplot(all_three_african_nations, aes(x = date, 
-                                 y = total_deaths, 
-                                 colour = location)) +
-  geom_line() +
-  scale_y_continuous(labels = comma) +
-  scale_color_manual("Country", values = cbPalette1) +
-  labs (title = "Total Deaths Over Time in Malawi, Mozambique, and Niger",
-        x = "Country",
-        y = "Number of deaths reported")
-```
-
-**Figure 6**: Total deaths over time in Mozambique, Niger, and Malawi. 
-
-```{r total-deaths-other-countries}
-# subset data so all of USA, UK, and Italy data is displayed
-all_three_other_countries <- all_owid_data %>%
-  dplyr::filter(`location` == "United States" | `location` == "United Kingdom" | `location` == "Italy") 
-
-# Create line graph that shows total deaths in USA, UK, and Italy
-ggplot(all_three_other_countries, aes(x = date, 
-                                 y = total_deaths, 
-                                 colour = location)) +
-  geom_line() +
-  scale_y_continuous(labels = comma) +
-  scale_color_manual("Country", values = cbPalette2) +
-  labs (title = "Total Deaths Over Time in USA, UK, and Italy",
-        x = "Country",
-        y = "Number of deaths reported")
-```
-
-**Figure 6**: Total deaths over time in Italy, United Kingdom, and United States. 
-
+**Figure 4b**: N and S genes have more unique SNPs in the set of samples analyzed.
 
 # Tables
 
@@ -265,6 +278,6 @@ gene_table %>%
                              "Length"))
 ```
 
-**Table 1**: Gene names, locations, and lengths in the SARS-CoV-2 genome. Higher SNP counts in the S and N genes may be related to the larger size of these genes.
+**Table 4c**: Gene names, locations, and lengths in the SARS-CoV-2 genome. Higher SNP counts in the S and N genes may be related to the larger size of these genes.
 
 # Sources Cited
