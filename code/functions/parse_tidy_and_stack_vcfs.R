@@ -42,9 +42,9 @@ parse_tidy_and_stack_vcfs <- function(vcf_dir_path) {
 
     # check for correct filenames in dataset
     if (!grepl(x = tidied_vcf$gt$Indiv[1], pattern = "[SED]RR[0-9]*")) {
-      warning(paste(vcf_file,
-                    "doesn't seem to be named with SRR/ERR/DRR ids.",
-                    "or does not have any SNPs called. Skipping."))
+        warning(paste(vcf_file,
+                      "doesn't seem to be named with SRR/ERR/DRR ids.",
+                      "or does not have any SNPs called. Skipping."))
       next
     }
 
